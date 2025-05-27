@@ -1,0 +1,1 @@
+with rendering page with get,post method and save data into file.
