@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Marks</title>
+</head>
+<body>
+  <!-- <ul>
+
+     <li>The marks of John is {{ marks['John'] }}</li> 
+     <li>The marks of Saurabj is {{ marks['Saurabj'] }}</li> 
+     <li>The marks of Mark is {{ marks['Marks'] }}</li> 
+
+    </ul>-->
+    {# this is a comment #}
+
+
+
+    <h2>Jinja Template</h2>
+    {% for key,value in marks.items() %}
+        <li> {{ key }} has scored {{ value }}</li>
+    {% endfor %}
+
+    <h2>Keys</h2>
+    {% for item in marks.keys() %}
+        {{ item }}
+        
+    {% endfor %}
+
+    <h2> value</h2>
+    {% for item in marks.values() %}
+        {{ item }}
+
+
+        
+    {% endfor %}
+
+    <h2> Another way</h2>
+
+    {% for item in marks.keys() %}
+        <li> the marks of {{ item }} is {{ marks.get(item) }}
+        {% if marks.get(item) > 44 %}
+            <span><b>&nbsp; that good </b></span>    
+        {% endif %}
+    {% endfor %}
+
+
+
+
+
+
+    
+</body>
+</html>
