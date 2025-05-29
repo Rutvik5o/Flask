@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title%} {% endblock %}</title>
+    <style>
+        nav{
+            background-color:rgb(161, 139, 139);
+            color:purple;
+            display:flex;
+           justify-content:center;
+          
+        }
+        footer{
+            background-color:rgb(141, 141, 90);
+            color:blueviolet
+        }
+    </style>
+</head>
+<body>
+    <nav>
+       <span><a href="/">Home</a></span>
+       <span><a href="/about">about</a></span>
+       <span></span><a href="/contact">contact</a></span>
+    </nav>
+
+    {% block content %} {% endblock %}
+
+
+    <footer>
+            {% block footer %} {% endblock %}
+    </footer>
+</body>
+</html>
